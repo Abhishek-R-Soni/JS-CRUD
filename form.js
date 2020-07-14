@@ -4,6 +4,7 @@ document.querySelector('#frm').addEventListener('submit', function (e) {
     console.log(e.target.elements.fname.value)  
     console.log(e.target.elements.dob.value)
 
+    // push new data in table
     user.push({
         id: uuidv4(),
         fname: e.target.elements.fname.value,

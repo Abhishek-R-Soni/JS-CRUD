@@ -1,19 +1,23 @@
+// creates table
 document.querySelector('#tbl').addEventListener('click', () => {
     user = []
     localStorage.setItem('user', JSON.stringify(user))
     alert('Local Storage Creatd...')
 })
 
+// display form with validation
 document.querySelector('#create').addEventListener('click', function (e) {
         location.href = "form.html";
 })
 
+// view all stored data
 document.querySelector('#view').addEventListener('click', function (e) {
     let users = JSON.parse(localStorage.getItem('user'))
 
     location.href = 'showdata.html'
 })
 
+// remove perticuler user
 function removeUser(id) {
     let users = JSON.parse(localStorage.getItem('user'))
 
@@ -27,7 +31,7 @@ function removeUser(id) {
     showUsers()
 }
 
-
+// show all user
 function showUsers() {
     document.querySelector('#div').innerHTML = ""
 

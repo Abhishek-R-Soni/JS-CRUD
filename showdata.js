@@ -1,10 +1,12 @@
 
 document.querySelector('#div').innerHTML = ""
 
+// h1 tag
 let h1 = document.createElement('h1')
 h1.textContent = "User Data"
 document.querySelector('#div').appendChild(h1)
 
+// creation of table
 let table = document.createElement('table');
 table.setAttribute('border', '1')
 let th1 = document.createElement('th')
@@ -43,8 +45,10 @@ table.appendChild(th5)
 table.appendChild(th6)
 table.appendChild(th7)
 
+// getting user data
 let users = JSON.parse(localStorage.getItem('user'))
 
+// table format data
 users.forEach((user) => {
     var tr = document.createElement('tr');
 
@@ -75,6 +79,7 @@ users.forEach((user) => {
 let d = document.querySelector('#div')
 d.appendChild(table);
 
+// back button
 document.querySelector('#back').addEventListener('click', () =>{
     location.href = 'test.html'
 })
